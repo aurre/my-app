@@ -105,7 +105,6 @@ workflows:
           requires:
             - test
             - build
-            - approve
   qa:
     jobs:
       - setup:
@@ -125,7 +124,6 @@ workflows:
           requires:
             - test
             - build
-            - approve
   stage:
     jobs:
       - setup:
@@ -145,7 +143,6 @@ workflows:
           requires:
             - test
             - build
-            - approve
   prod:
     jobs:
       - setup:
