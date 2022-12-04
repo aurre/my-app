@@ -71,7 +71,7 @@ jobs:
           command: echo "Deploying application to the $ENVIRONMENT environment. Application will be deployed to $DEPLOY_URL"
       - run:
           name: Deploy applicaton
-          command: ssh -0StricHostKeyChecking=no -v $USER@HOST "/home/circleci/deploy.sh $ENVIRONMENT"
+          command: ssh -oStricHostKeyChecking=no -v $USER@HOST "/home/circleci/deploy.sh $ENVIRONMENT"
 
 workflows:
   version: 2
